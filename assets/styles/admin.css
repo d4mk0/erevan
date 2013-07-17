@@ -1,0 +1,11 @@
+#notify {
+  color: red;
+  float: right;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin: 30px;
+}
