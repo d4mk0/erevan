@@ -1,6 +1,20 @@
+body {
+  background-color: #EEFFFF;
+}
+
+#base {
+  margin: 12px;
+}
+
 #notify {
   color: red;
   float: right;
+  margin: 10px;
+}
+
+#notify a {
+  color: red;
+  font-weight: bold;
 }
 
 .header {
@@ -8,4 +22,78 @@
   font-size: 25px;
   text-align: center;
   margin: 30px;
+  clear: both;
+}
+
+#menu {
+  text-align: center;
+  font-size: 25px;
+  clear: both;
+}
+
+#menu span {
+  background-color: yellow;
+  padding: 2px;
+  border: 1px dotted black;
+}
+
+#menu span:hover {
+  background-color: black;
+  color: yellow;
+  border: 1px dotted black;
+}
+
+#menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.reviews {
+  margin: 0 auto;
+}
+
+.review {
+  border: 1px solid black;
+  margin: 15px auto;
+  width: 450px;
+  padding: 0 15px 5px;
+}
+
+.review div {
+  margin: 5px 0 0;
+  text-align: justify;
+}
+
+.reviews_menu {
+  margin: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.reviews_menu a {
+  text-decoration: none;
+}
+
+.reviews_menu span:hover {
+  border-bottom: 2px solid graytext;
+}
+
+h2 {
+  text-align: center;
+}
+
+.pages {
+  text-align: center;
+}
+
+.pages a{
+  text-decoration: none;
+}
+
+.pages span {
+  margin: 0 5px;
+}
+
+.contacts {
+  text-align: center;
 }

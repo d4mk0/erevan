@@ -4,8 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel='stylesheet' href="assets/styles/application.css" type='text/css'>
     <link rel='stylesheet' href="assets/styles/form_style.css" type='text/css'>
-    <script type="text/javascript" src="script/jquery-2.0.3.js"></script>
-    <script type="text/javascript" src="script/reviews.js"></script>
     <?
       include "blocks/connect_db.php";
       if($_POST['username'] != '' and $_POST['text'] != '' and
@@ -27,36 +25,7 @@
         <? include "blocks/header.php" ?>
       </div>
       <div id="content">
-        <div class="header">Здесь типа будут всякие там отзывы</div>
-        <div class="review_invite">
-          Оставьте свой отзыв
-        </div>
-        <div class="new_review">
-          <form action="reviews.php" method="post">
-            <table class="new_review_table">
-              <tr>
-                <td>Ваше имя:</td>
-                <td><input type="text" name="username" maxlength="50"></td>
-              </tr>
-              <tr>
-                <td>Текст:</td>
-                <td><textarea required name="text" cols="50" rows="3"></textarea></td>
-              </tr>
-              <tr>
-                <td>Телефон:</td>
-                <td><input type="text" name="phone" maxlength="15"></td>
-              </tr>
-              <tr>
-                <td>E-mail:</td>
-                <td><input type="email" name="email" maxlength="30"></p></td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center"><input type="submit" value="Добавить"></td>
-              </tr>
-            </table>
-            <p></p>
-          </form>
-        </div>
+        <div class="header">Новости ресторана</div>
         <div class="reviews">
           <?
             $reviews_on_page = 5;

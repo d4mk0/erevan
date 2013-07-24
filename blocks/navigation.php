@@ -1,5 +1,5 @@
 <?
-  include "connect_db.php";
+  include "blocks/connect_db.php";
   $query = "SELECT * FROM menus";
   $result = mysql_query($query);
   echo "<div id='menu'>";

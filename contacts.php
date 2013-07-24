@@ -6,7 +6,7 @@
     <link rel='stylesheet' href="assets/styles/form_style.css" type='text/css'>
     <script type="text/javascript" src="script/jquery-2.0.3.js"></script>
     <script type="text/javascript" src="script/reviews.js"></script>
-    <? include "connect_db.php" ?>
+    <? include "blocks/connect_db.php" ?>
     <title>Ресторан | Ереван</title>
   </head>
   <body>
