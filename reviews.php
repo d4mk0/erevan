@@ -6,19 +6,9 @@
     <link rel='stylesheet' href="assets/styles/form_style.css" type='text/css'>
     <script type="text/javascript" src="script/jquery-2.0.3.js"></script>
     <script type="text/javascript" src="script/reviews.js"></script>
-    <?
-      include "blocks/connect_db.php";
-      if($_POST['username'] != '' and $_POST['text'] != '' and
-      $_POST['phone'] != '' ) {
-        $username = $_POST['username'];
-        $text = $_POST['text'];
-        $phone = $_POST['phone'];
-        $email = $_POST['email'];
-        $query = sprintf("INSERT INTO reviews (username, text, phone, email)
-          VALUES ('%s','%s','%s','%s')", $username, $text, $phone, $email);
-        mysql_query($query);
-      }
-    ?>
+      <?
+        include "blocks/connect_db.php";
+      ?>
     <title>Ресторан | Ереван</title>
   </head>
   <body>
@@ -27,12 +17,12 @@
         <? include "blocks/header.php" ?>
       </div>
       <div id="content">
-        <div class="header">Здесь типа будут всякие там отзывы</div>
+        <div class="header">Пожалуйста оставьте Свой отзыв о нашем прекрасном Ресторане</div>
         <div class="review_invite">
           Оставьте свой отзыв
         </div>
         <div class="new_review">
-          <form action="reviews.php" method="post">
+          <form action="blocks/add_review.php" method="post">
             <table class="new_review_table">
               <tr>
                 <td>Ваше имя:</td>
@@ -83,7 +73,7 @@
                       <td class='date'>%s</td>
                     </tr>
                   </table>",
-                $count--, $row['text'], $row['username'], date("d.m", strtotime($row['date'])));
+                $count--, $row['text'], $row['username'], date("d-m-Y", strtotime($row['date'])));
             }
             $count_pages = $row_count['count(id)'] == $reviews_on_page ? $row_count['count(id)']/$reviews_on_page : $row_count['count(id)']/$reviews_on_page+1;
             if($count_pages >= 2){
