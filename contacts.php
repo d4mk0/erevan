@@ -16,9 +16,11 @@
       </div>
       <div id="content">
         <div class="header">Контакты</div>
-         <div class="map">
-        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0"
-                marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0+%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D0%B0+42&amp;aq=&amp;sll=53.193982,45.012116&amp;sspn=0.209388,0.676346&amp;t=m&amp;g=%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0&amp;ie=UTF8&amp;hq=&amp;hnear=%D1%83%D0%BB.+%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D0%B0,+42,+%D0%9F%D0%B5%D0%BD%D0%B7%D0%B0,+%D0%9F%D0%B5%D0%BD%D0%B7%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F,+440000&amp;ll=53.190711,45.018026&amp;spn=0.001636,0.005284&amp;z=14&amp;output=embed"></iframe><br />
+        <div class="map">
+        <a id="firmsonmap_biglink" href="http://maps.2gis.ru/#/?history=project/penza/center/45.02042239427,53.189378063192/zoom/17/state/widget/id/5911502791908024/firms/5911502791908024">Перейти к большой карте</a>
+        <script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
+        <script charset="utf-8" type="text/javascript">new DGWidgetLoader({"borderColor":"#a3a3a3","width":"450","height":"350","wid":"eb2bec4f69b34faedf09b93756231705","pos":{"lon":"45.02042239427","lat":"53.189378063192","zoom":"17"},"opt":{"ref":"hidden","card":["name","contacts","schedule","payings"],"city":"penza"},"org":[{"id":"5911502791908024"}]});</script>
+        <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
         </div>
         <div class="contacts">
           <?
