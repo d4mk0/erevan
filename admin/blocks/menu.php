@@ -4,3 +4,4 @@
   <a href="contacts.php"><span class="item">Контакты</span></a>
   <a href="news.php"><span class="item">Новости</span></a>
   <a href="menu_edit.php"><span class="item">Пользовательское меню</span></a>
+</div>
