@@ -8,11 +8,13 @@
     <?
       include "../blocks/connect_db.php";
       if(isset($_POST['name']) and isset($_POST['value'])) {
-        $name = $_POST['name'];
-        $value = $_POST['value'];
-        $query = sprintf("INSERT INTO contacts (name, value)
-          VALUES ('%s','%s')", $name, $value);
-        mysql_query($query);
+        if($_POST['name'] != 'Введите название' and $_POST['value'] != 'Введите сам контакт'){
+          $name = $_POST['name'];
+          $value = $_POST['value'];
+          $query = sprintf("INSERT INTO contacts (name, value)
+            VALUES ('%s','%s')", $name, $value);
+          mysql_query($query);
+        }
       }
     ?>
   </head>
