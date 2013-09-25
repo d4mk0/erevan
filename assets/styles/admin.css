@@ -31,13 +31,13 @@ body {
   clear: both;
 }
 
-#menu span {
+#menu .item {
   background-color: yellow;
   padding: 2px;
   border: 1px dotted black;
 }
 
-#menu span:hover {
+#menu .item:hover {
   background-color: black;
   color: yellow;
   border: 1px dotted black;
@@ -96,4 +96,45 @@ h2 {
 
 .contacts {
   text-align: center;
+}
+
+.news {
+  margin: 0 auto;
+}
+
+.new {
+  border: 2px dotted black;
+  margin: 10px auto;
+  width: 500px;
+  padding: 0 15px 5px;
+}
+
+.new div {
+  margin: 5px 0 0;
+  text-align: justify;
+}
+
+.news_menu {
+  margin: 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.news_menu a {
+  text-decoration: none;
+}
+
+.news_menu span:hover {
+  border-top: 2px solid graytext;
+  border-bottom: 2px solid graytext;
+}
+
+.add_news {
+  width: 500px;
+  margin: 0 auto;
+  
+}
+
+.add_news input[type="text"] {
+  width: 500px;
 }
