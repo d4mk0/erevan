@@ -8,9 +8,9 @@
       include "../blocks/connect_db.php";
       if(isset($_POST['status']) and isset($_POST['id'])) {
         $status = $_POST['status'];
-        $id = $_POST['id'];
+        $id = $_POST['id']; 
         $query = sprintf("UPDATE reviews SET status='%s' WHERE id=%s", $status, $id);
-        mysql_query($query);
+        mysql_query($query); #обновление статуса отзыва
       }
     ?>
   </head>
@@ -31,10 +31,10 @@
         $reviews_on_page = 5;
         if($_GET['page'] > 0) $page = $_GET['page'];
         else $page = 1;
-        if(isset($_GET['status'])) {
-          $status = $_GET['status'];
+        if(isset($_GET['status'])) { #если параметром GET передан статус, выбираются только
+          $status = $_GET['status']; #отзывы с определенным статусом, например new(новые)
           $query = sprintf("SELECT count(id) FROM reviews WHERE status='%s'", $status);
-        } else $query = "SELECT count(id) FROM reviews";
+        } else $query = "SELECT count(id) FROM reviews"; #иначе выбираются все
         $result = mysql_query($query);
         $row_count = mysql_fetch_array($result);
         $count = $row_count['count(id)'];
@@ -59,8 +59,9 @@
             <div><b>E-mail:</b> %s</div>
             ",
           $count--, $row['text'], $row['username'], $row['date'], $row['phone'], $row['email']);
-          if(isset($status)) {
-            $status_link = "status=".$status;
+          if(isset($status)) { #создание параметров для следующих страниц, на которые мы переходим
+                               #если результаты не умещаются на одной странице
+            $status_link = "status=".$status; #создание происходит только если был GET параметр status
           } else {
             $status_link = '';
           }
@@ -69,7 +70,7 @@
           $statuses['approved'] = "Подтвержденный";
           echo "<form action='reviews.php?".$status_link."' method='post'>";
           echo "<div><b>Статус:</b> <select name='status'>";
-          foreach($statuses as $key => $value) {
+          foreach($statuses as $key => $value) { #создание опций для select_boxа
             if($key == $row['status']) $option = 'selected';
             else $option = '';
             printf("<option value='%s' %s>%s</option>", $key, $option, $value);
@@ -84,9 +85,9 @@
         $count_pages = $row_count['count(id)'] == $reviews_on_page ? $row_count['count(id)']/$reviews_on_page : $row_count['count(id)']/$reviews_on_page+1;
         if($count_pages >= 2){
           echo "<div class='pages'>Страницы: ";
-          for($i = 1; $i <= $count_pages; $i++) {
+          for($i = 1; $i <= $count_pages; $i++) { #создание блока "Страницы"
             if($i != $page) printf("<span><a href='reviews.php?page=%s&%s'>%s</a></span>", $i, $status_link, $i);
-            else printf("<span>%s</span>", $i);
+            else printf("<span class='current_page'>%s</span>", $i);
           }
           echo "</div>";
         }

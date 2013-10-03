@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel='stylesheet' href="assets/styles/application.css" type='text/css'>
-    <script type="text/javascript" src="script/jquery-2.0.3.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--Установка кодировки страницы-->
+    <link rel='stylesheet' href="assets/styles/application.css" type='text/css'><!--Подключение теблицы стилей-->
+    <script type="text/javascript" src="script/jquery-2.0.3.js"></script><!--Подключение библиотеки jQuery-->
     <title>Ресторан | Ереван</title>
   </head>
   <body>
     <div id="base_block">
       <div id="header">
-        <? include "blocks/header.php" ?>
+        <? include "blocks/header.php" #подключение шапки сайта ?>
       </div>
       <div id="content">
         <div class="header">Вы находитесь на главной странице ресторана Ереван</div>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div id="footer">
-        <? include "blocks/footer.php" ?>
+        <? include "blocks/footer.php" #подключение футера ?>
       </div>
     </div>
   </body>

@@ -1,4 +1,5 @@
 <?php
+  #скрипт для обновления разделов меню
   include "../../blocks/connect_db.php";
   if(isset($_POST['name']) and isset($_POST['path']) and isset($_POST['id'])) {
     $name = $_POST['name'];

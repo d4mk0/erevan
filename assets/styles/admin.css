@@ -1,3 +1,5 @@
+/* Таблица стилей для администраторской части */
+
 body {
   background-color: #EEFFFF;
 }
@@ -92,6 +94,10 @@ h2 {
 
 .pages span {
   margin: 0 5px;
+}
+
+.pages .current_page {
+  color: blue;
 }
 
 .contacts {

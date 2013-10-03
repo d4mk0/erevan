@@ -32,7 +32,8 @@
             </form>", $row['name'], $row['path'], $row['id'], $row['id']);
           }
         ?>
-        <div class="new_contact">
+        <div class="new_contact"><!--Форма добавления нового контакта сайта-->
+          <!--До ввода текста в текстовых полях, будут выводится приглашения-->
           <form action="blocks/add_menu_item.php" method="post">
             <input type="text" name="name" value="Введите название"
                    onblur="if (this.value == '') this.value = 'Введите название';"

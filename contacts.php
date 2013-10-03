@@ -16,7 +16,7 @@
       </div>
       <div id="content">
         <div class="header">Контакты</div>
-        <div class="map">
+        <div class="map"><!--Подключение карты со стороннего серсиса: 2gis.ru-->
         <a id="firmsonmap_biglink" href="http://maps.2gis.ru/#/?history=project/penza/center/45.02042239427,53.189378063192/zoom/17/state/widget/id/5911502791908024/firms/5911502791908024">Перейти к большой карте</a>
         <script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
         <script charset="utf-8" type="text/javascript">new DGWidgetLoader({"borderColor":"#a3a3a3","width":"450","height":"350","wid":"eb2bec4f69b34faedf09b93756231705","pos":{"lon":"45.02042239427","lat":"53.189378063192","zoom":"17"},"opt":{"ref":"hidden","card":["name","contacts","schedule","payings"],"city":"penza"},"org":[{"id":"5911502791908024"}]});</script>
@@ -29,6 +29,7 @@
             while ($row = mysql_fetch_array($result)) {
               printf("<div>%s: %s</div>", $row['name'], $row['value']);
             }
+            #выбираем и выводим все контакты которые есть в базе
           ?>
         </div>
       </div>

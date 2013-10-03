@@ -1,4 +1,5 @@
 <?php
+  #скрипт удаления контактов
   include "../../blocks/connect_db.php";
   if(isset($_GET['id'])) {
     $id = $_GET['id'];

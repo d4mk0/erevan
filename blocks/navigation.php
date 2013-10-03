@@ -1,4 +1,5 @@
 <?
+  #Меню навигации для пользовательской части
   include "blocks/connect_db.php";
   $query = "SELECT * FROM menus";
   $result = mysql_query($query);

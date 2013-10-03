@@ -1,4 +1,5 @@
 <?php
+  #скрипт добавления разделов меню
   include "../../blocks/connect_db.php";
   if(isset($_POST['name']) and isset($_POST['path'])) {
     if($_POST['name'] != 'Введите название' and $_POST['path'] != 'Введите путь'){

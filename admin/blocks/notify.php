@@ -1,3 +1,4 @@
+<!--Оповещение для новых отзывов-->
 <div id="notify">
   <?
       $query = "SELECT count(id) FROM reviews WHERE status='new'";

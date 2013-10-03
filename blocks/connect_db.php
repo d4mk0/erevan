@@ -1,15 +1,16 @@
 <?php
-  $username = 'rails';
-  $password = '';
-  $server = 'localhost';
-  $database = 'erevan';
-  $link = mysql_connect($server, $username, $password);
+  #данные для подключения к БД
+  $username = 'rails';    #Логин 
+  $password = '';         #Пароль
+  $server = 'localhost';  #Сервер, в случае локального 'localhost'
+  $database = 'erevan';   #База сайта
+  $link = mysql_connect($server, $username, $password); #подключаемся к серверу
   if(!$link) {
     die('Error connection to server: '.mysql_error());
   }
-  $db = mysql_select_db($database, $link);
+  $db = mysql_select_db($database, $link); #выбираем БД
   if(!$db) {
     die('Error connection to db: '.mysql_error());
   }
-  mysql_query("set names utf8");
+  mysql_query("set names utf8"); #переключаем кодировку
 ?>

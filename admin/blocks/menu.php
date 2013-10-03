@@ -1,3 +1,4 @@
+<!--Меню администраторской части-->
 <div id="menu">
   <a href="../index.php" target="_blank"><span class="item">Front-end</span></a>
   <a href="reviews.php"><span class="item">Отзывы</span></a>

@@ -5,7 +5,7 @@
     <link rel='stylesheet' href="assets/styles/application.css" type='text/css'>
     <link rel='stylesheet' href="assets/styles/form_style.css" type='text/css'>
     <script type="text/javascript" src="script/jquery-2.0.3.js"></script>
-    <script type="text/javascript" src="script/reviews.js"></script>
+    <script type="text/javascript" src="script/reviews.js"></script><!--Подключение javascript файла-->
       <?
         include "blocks/connect_db.php";
       ?>
@@ -22,7 +22,7 @@
           Оставьте свой отзыв
         </div>
         <div class="new_review">
-          <form action="blocks/add_review.php" method="post">
+          <form action="blocks/add_review.php" method="post"><!--форма для добавления отзыва-->
             <table class="new_review_table">
               <tr>
                 <td>Ваше имя:</td>
